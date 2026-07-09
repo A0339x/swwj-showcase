@@ -336,9 +336,11 @@ h1 .h-tol{
      stack that can overflow or clip on short viewports */
   .hero{height:auto;min-height:calc(100vh - 68px);min-height:calc(100svh - 68px);max-height:none}
   .hero-content{position:relative;padding-top:clamp(230px,38vh,340px);padding-top:clamp(230px,38svh,340px)}
-  /* mobile-specific crop: zoom into the spark burst / water mist so the
-     top-of-page strip keeps its visual hook instead of a bare dark texture */
-  .hero-img.fire-side{transform:scale(1.45);transform-origin:50% 68%}
+  /* mobile-specific crop: the cover crop of the 3:2 banner is already a tight
+     close-up on a narrow screen, so no extra zoom — instead pan the window so
+     the cutting head (at ~38% of the image width) sits fully in the fire pane
+     left of the seam, nozzle tip lower-third, spark burst filling the right */
+  .hero-img.fire-side{object-position:38% center}
   .hero-img.water-side{object-position:62% center}
   /* heavier scrim under the type block over the spark shower */
   .hero-scrim{background:linear-gradient(to top,rgba(7,9,13,1) 0%,rgba(7,9,13,.9) 32%,rgba(7,9,13,.58) 56%,rgba(7,9,13,.16) 78%,rgba(7,9,13,.34) 100%)}
