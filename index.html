@@ -341,7 +341,10 @@ h1 .h-tol{
      the cutting head (at ~38% of the image width) sits fully in the fire pane
      left of the seam, nozzle tip lower-third, spark burst filling the right */
   .hero-img.fire-side{object-position:38% center}
-  .hero-img.water-side{object-position:62% center}
+  /* water side: the waterjet nozzle sits at ~30% of the image width — anchor
+     there (was 62%, which framed only the spray) so the nozzle reads fully in
+     frame when the seam is dragged open, spray filling the right */
+  .hero-img.water-side{object-position:30% center}
   /* heavier scrim under the type block over the spark shower */
   .hero-scrim{background:linear-gradient(to top,rgba(7,9,13,1) 0%,rgba(7,9,13,.9) 32%,rgba(7,9,13,.58) 56%,rgba(7,9,13,.16) 78%,rgba(7,9,13,.34) 100%)}
   .divider-handle{padding:10px 15px 9px;gap:4px;border-radius:0 0 12px 12px}
